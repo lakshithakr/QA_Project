@@ -1,0 +1,12 @@
+README.md
+setup.py
+QA_Project.egg-info/PKG-INFO
+QA_Project.egg-info/SOURCES.txt
+QA_Project.egg-info/dependency_links.txt
+QA_Project.egg-info/requires.txt
+QA_Project.egg-info/top_level.txt
+src/__init__.py
+src/logger.py
+src/utills.py
+src/app/__init__.py
+src/app/app.py
