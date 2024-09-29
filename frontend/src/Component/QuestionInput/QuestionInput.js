@@ -1,14 +1,17 @@
 import React from 'react';
-
+import './QuestionInput.css';
 const QuestionInput = ({ question, setQuestion }) => {
     return (
-        <input
-            type="text"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            placeholder="Type your question here"
-            required
-        />
+        <div className='input-container'>
+            <input
+                type="text"
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                placeholder="Type your question here"
+                required
+            />
+        </div>
+
     );
 };
 

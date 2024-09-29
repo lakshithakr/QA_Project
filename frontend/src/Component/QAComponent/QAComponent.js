@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import QuestionInput from '../QuestionInput/QuestionInput';
+// import QuestionInput from '../QuestionInput/QuestionInput';
 import AnswerDisplay from '../AnswerDisplay/AnswerDisplay';
-import SubmitButton from '../SubmitButton/SubmitButton';
-import ResetButton from '../ResetButton/ResetButton';
+// import SubmitButton from '../SubmitButton/SubmitButton';
+// import ResetButton from '../ResetButton/ResetButton';
 
 import "./QAComponent.css"
 const QAComponent = () => {
@@ -33,19 +33,23 @@ const QAComponent = () => {
   };
 
   return (
-      <div className='container-fluid qa-section'>
-          <h1>Ask a Question</h1>
-          <form onSubmit={handleSubmit}>
-              <QuestionInput question={question} setQuestion={setQuestion} />
-              <SubmitButton handleSubmit={handleSubmit} />
-              <ResetButton handleReset={handleReset} />
-          </form>
-          {loading ? (
-              <p>Loading...</p> 
-          ) : (
-              <AnswerDisplay answer={answer} />
-          )}
-      </div>
+    <div className='form-container'>
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                placeholder="Type your question here"
+                required
+            />
+            <button type="submit">Proceed</button>
+            <button type="button" onClick={handleReset}>New Question</button> {/* Reset Button */}
+        </form>
+        {loading ? (
+        <p className='loading'>Loading...</p> ) : (
+        <AnswerDisplay answer={answer} />
+        )}
+    </div>
   );
 };
 

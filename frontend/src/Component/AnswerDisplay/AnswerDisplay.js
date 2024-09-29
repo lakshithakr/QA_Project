@@ -1,11 +1,10 @@
 import React from 'react';
-
+import './AnswerDisplay.css'
 const AnswerDisplay = ({ answer }) => {
     return (
         answer && (
-            <div>
-                <h2>Answer:</h2>
-                <p>{answer}</p>
+            <div className="answer-container">
+                <p className="answer-text">{answer}</p>
             </div>
         )
     );
