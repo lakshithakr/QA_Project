@@ -2,10 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-left: 250px;
     height: 150px;
     background-color: #DBA39A;
-    margin: 0 auto;
 }
 
 .home h1{

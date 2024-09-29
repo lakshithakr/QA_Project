@@ -5,7 +5,7 @@ import AnswerDisplay from '../AnswerDisplay/AnswerDisplay';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import ResetButton from '../ResetButton/ResetButton';
 
-
+import "./QAComponent.css"
 const QAComponent = () => {
   const [question, setQuestion] = useState('');
   const [answer, setAnswer] = useState('');
@@ -33,7 +33,7 @@ const QAComponent = () => {
   };
 
   return (
-      <div className='container qa-section'>
+      <div className='container-fluid qa-section'>
           <h1>Ask a Question</h1>
           <form onSubmit={handleSubmit}>
               <QuestionInput question={question} setQuestion={setQuestion} />
