@@ -14,3 +14,5 @@ Requires-Dist: streamlit
 Requires-Dist: python-dotenv
 Requires-Dist: beautifulsoup4
 Requires-Dist: faiss-cpu
+Requires-Dist: fastapi
+Requires-Dist: uvicorn

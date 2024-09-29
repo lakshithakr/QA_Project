@@ -8,6 +8,7 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.llms import OpenAI
 from langchain.chains.question_answering import load_qa_chain
+from bs4 import BeautifulSoup
 load_dotenv(find_dotenv())
 api_key=os.environ.get("OPEN_API_KEY")
 embedding=OpenAIEmbeddings(openai_api_key=api_key)
@@ -72,16 +73,7 @@ def text_embedding(chunks):
 def generate_answer(vector_db,query):
     embedding_vector = embedding.embed_query(query)
     docs = vector_db.similarity_search_by_vector(embedding_vector,k=2)
-    # print(len(docs))
-    # print("---------------------------------------------\n")
-    # print(docs[0])
-    # print("---------------------------------------------\n")
-    # print(docs[1])
-
     chain=load_qa_chain(llm=llm,chain_type='stuff')
-    #response= chain.run(input_documents=docs,question=query)
-    # response2= chain.run(input_documents=[docs[1]],question=query)
-    # response3= chain.run(input_documents=[docs[2]],question=query)
     template = """
     The question based on the student handbook of University of Ruhuna. Answer the question using given context "{question}":
     Final answer:
@@ -90,6 +82,9 @@ def generate_answer(vector_db,query):
     final_answer = chain.run(input_documents=docs, question=prompt)
 
     return final_answer
+
+
+
 
 
 

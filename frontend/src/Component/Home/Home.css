@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 150px;
+    background-color: #DBA39A;
+    margin: 0 auto;
+}
+
+.home h1{
+    margin-top: 0px;
+    text-align: center;
+    color: brown;
+}
+
+
+
+
+
+

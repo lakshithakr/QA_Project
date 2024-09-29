@@ -24,7 +24,7 @@ def main():
     query = st.text_input("Enter The Question")
     if st.button("Process"):
         if query:
-            answer=generate_answer(vector_db, query)
+            answer=generate_answer(vector_db,query)
             st.write(answer)
         else:
             st.write("Please Enter a Valid Question")

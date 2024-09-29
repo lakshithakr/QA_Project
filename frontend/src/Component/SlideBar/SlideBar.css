@@ -1,0 +1,57 @@
+.slidebar{
+    display: flex;
+    background-color: #F0DBDB;
+    height: 100vh;
+
+}
+
+.logo img{
+    border-radius: 90px;
+    margin-top: 10px;
+    height: 120px;
+    width: 90px;
+    display: flex;
+    vertical-align: middle;
+    margin: 0 auto;
+    object-fit: cover;
+    border: 3px solid gold;
+}
+
+/* .navbar-items ul li{
+    color: goldenrod;
+    list-style-type: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.navbar-items ul li svg{
+    margin-right: 25px;
+    margin-left: 10px;
+} */
+
+.question{
+    margin-top: 20px;
+    border-bottom: solid white;
+}
+
+.question svg{
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+
+.history{
+    margin-top: 25px;
+    border-bottom: solid white;
+}
+
+.history svg{
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+.container-fluid{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    overflow: hidden;
+}

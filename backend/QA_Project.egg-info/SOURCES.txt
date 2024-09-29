@@ -10,3 +10,4 @@ src/logger.py
 src/utills.py
 src/app/__init__.py
 src/app/app.py
+src/app/main.py
