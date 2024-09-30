@@ -98,8 +98,18 @@
 }
 
 
-.active {
+.navbar-items .active .question {
+    border-left: solid brown;
     font-weight: bold;
+    color: brown;
+
+}
+
+.navbar-items .active .home-section {
+    border-left: solid brown;
+    font-weight: bold;
+    color: brown;
+
 }
 
 
