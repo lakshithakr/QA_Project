@@ -5,6 +5,7 @@ import AnswerDisplay from '../AnswerDisplay/AnswerDisplay';
 // import SubmitButton from '../SubmitButton/SubmitButton';
 // import ResetButton from '../ResetButton/ResetButton';
 
+
 import "./QAComponent.css"
 const QAComponent = () => {
   const [question, setQuestion] = useState('');

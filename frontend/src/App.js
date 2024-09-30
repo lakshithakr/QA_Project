@@ -1,13 +1,20 @@
 import QAComponent from "./Component/QAComponent/QAComponent";
 import SlideBar from "./Component/SlideBar/SlideBar";
 import Home from "./Component/Home/Home";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 function App() {
   return (
-    <>
-      <SlideBar/>
-      <Home/>
-      <QAComponent/>
-    </>
+    <Router>
+      <div className="app-container">
+        <div className="content">
+        <Routes>
+          <Route path="/" element={<><SlideBar/> <Home/></>}/>
+          <Route path='/question' element={<><SlideBar/> <Home/><QAComponent/></>}/>
+        </Routes>
+      </div>
+    </div>
+    </Router>
+
 
 
   );
