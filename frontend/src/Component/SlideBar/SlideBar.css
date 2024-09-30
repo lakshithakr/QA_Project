@@ -112,6 +112,13 @@
 
 }
 
+.navbar-items .active .history {
+    border-left: solid brown;
+    font-weight: bold;
+    color: brown;
+
+}
+
 
 
 
