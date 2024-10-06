@@ -11,4 +11,5 @@ beautifulsoup4
 faiss-cpu
 fastapi
 uvicorn
+pymongo
 -e .
