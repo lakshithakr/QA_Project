@@ -24,7 +24,7 @@ const SlideBar = () => {
                     <div><FcOnlineSupport size={35}/>Ask Questions</div>
                 </div>
             </NavLink>
-            <NavLink to='#' activeClassName="active">
+            <NavLink to='/history' activeClassName="active">
                 <div className='history'>
                     <div><FcRightUp2 size={35}/>History</div>
                 </div>

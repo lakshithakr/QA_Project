@@ -5,10 +5,19 @@ from bs4 import BeautifulSoup
 from fastapi.encoders import jsonable_encoder
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
+from pymongo import MongoClient
+from bson.objectid import ObjectId
+from bson.json_util import dumps
 
 app= FastAPI()
 
+uri = f"mongodb+srv://lakshithakumuduranga102:Laki1234@sketch.a6hz2ws.mongodb.net/"
 origins=["http://localhost:3000"]
+
+client = MongoClient(uri)
+qa_db=client.QA
+qa_collection=qa_db['QA_Collection']
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -46,7 +55,13 @@ class Question(BaseModel):
 @app.post("/generate-answer/")
 async def generate_answer_endpoint(question: Question):
     answer = generate_answer(vector_db,question.question)  # Call your existing function here
+    result = qa_collection.insert_one({"question": question.question, "answer": answer})
     return {"answer": answer}
+
+@app.get("/history")
+def get_all_questions():
+    all_qa = qa_collection.find()
+    return dumps(all_qa)
 
 if __name__ == "__main__":
     import uvicorn

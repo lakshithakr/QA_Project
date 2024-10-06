@@ -40,7 +40,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: rgb(10, 199, 10);
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -50,7 +50,7 @@ button[type="button"] {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: green;
 }
 
 button[type="button"]:hover {
